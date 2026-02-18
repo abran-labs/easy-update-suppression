@@ -11,12 +11,9 @@ base {
 }
 
 loom {
-    splitEnvironmentSourceSets()
-
     mods {
         "better_update_suppression" {
             sourceSet sourceSets.main
-            sourceSet sourceSets.client
         }
     }
 }
@@ -28,11 +25,7 @@ fabricApi {
 }
 
 repositories {
-    // Add repositories to retrieve artifacts from in here.
-    // You should only use this when depending on other mods because
-    // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-    // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-    // for more information about repositories.
+    maven { url = "https://maven.nucleoid.xyz" }
 }
 
 dependencies {
@@ -42,6 +35,10 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modImplementation "eu.pb4:polymer-core:0.15.2+1.21.11"
+    modImplementation "eu.pb4:polymer-blocks:0.15.2+1.21.11"
+    modImplementation "eu.pb4:polymer-resource-pack:0.15.2+1.21.11"
+    modImplementation "eu.pb4:polymer-autohost:0.15.2+1.21.11"
 }
 
 processResources {

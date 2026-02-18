@@ -1,35 +1,31 @@
-# Better Update Suppression 更好的更新抑制
+# Easy Update Suppression
 
-## 如何使用？
+This mod is a fork of [Better Update Suppression](https://modrinth.com/mod/better-update-suppression) that uses [Polymer](https://modrinth.com/mod/polymer) to make it server-side only.
 
-1. 下载`BetterUpdateSuppression-1.0-SNAPSHOT.jar
-`，放入mods文件夹
-2. 输入指令给予自己更新抑制方块
-    ```
-    /give @s better_update_suppression:update_suppression_block 64
-    ```
-   或使用侦测器\*1和红石粉\*8合成
+## How to use?
+
+1. Craft the `Update Suppression Block` using 1 Observer surrounded by 8 Redstone Dust.
    ![](img/-1.png)
-3. 在更新抑制前搭好结构（以切门为例）
+2. Build the structure before update suppression (taking portal slicing as an example).
    ![](img/0.png)
-4. 将`更新抑制方块`紧贴放置需要抑制的方块旁边
+3. Place the `Update Suppression Block` directly adjacent to the block that needs to be suppressed.
    ![](img/1.png)
-5. 右键`更新抑制方块`，中心灰色部分变红即为激活状态
+4. Right-click the `Update Suppression Block`. The center gray part will turn red, indicating that it is active.
    ![](img/2.png)
-6. 敲掉黑曜石！此时会触发更新抑制，地狱门不会破碎
+5. Break the obsidian! Update suppression will be triggered, and the nether portal frames will not break.
    ![](img/3.png)
-7. 再次右键`更新抑制方块`，取消激活状态，中心红色部分重新变灰
+6. Right-click the `Update Suppression Block` again to deactivate it.
    ![](img/4.png)
-8. 破坏`更新抑制方块`
+7. Break the `Update Suppression Block`.
    ![](img/5.png)
-9. 如法炮制可以把黑曜石全部去除（不小心缺了一个）
+8. Repeat the method to remove all obsidian.
    ![](img/6.png)
 
-## 注意事项
-1. 更新抑制轻则崩服，重则崩档，**使用前务必备份存档！！！非常重要！！！**
-2. 如何避免崩档崩服？
-    - carpet mod 开启更新抑制崩溃保护
-    - 不要把两个`更新抑制方块`紧贴放置，即使没有激活
-    - 慢慢操作，不要急躁
+## Precautions
+1. Update suppression can cause server crashes in mild cases, or world corruption in severe cases. **Make sure to back up your save before use!!! Very important!!!**
+2. How to avoid world corruption and server crashes?
+    - Enable update suppression crash protection in carpet mod.
+    - Do not place two `Update Suppression Blocks` adjacent to each other, even if they are not activated.
+    - Operate slowly; do not rush.
 
-依赖模组：fabric-api
+Dependencies: fabric-api, polymer
